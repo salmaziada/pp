@@ -211,6 +211,7 @@ public class HomeFragment extends BaseFragment {
         time.add(9, getString(R.string.there_label10));
         time.add(10, getString(R.string.there_label11));
         time.add(11, getString(R.string.there_label12));
+        time.add(11, getString(R.string.there_label12));
 
 
         //////////////////////////////////////////////////////////////////
