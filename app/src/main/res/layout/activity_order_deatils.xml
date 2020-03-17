@@ -1,0 +1,601 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:background="#272424"
+    android:layoutDirection="locale"
+    android:textDirection="locale">
+
+    <include layout="@layout/toolbar" />
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="android.support.design.widget.AppBarLayout$ScrollingViewBehavior">
+
+        <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            app:layout_constraintBottom_toTopOf="@id/price_details_lay"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:context="net.selsela.carRental.ui.order.OrderDeatilsActivity">
+
+                <TextView
+                    android:id="@+id/info_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_17sdp"
+                    android:layout_marginTop="@dimen/_6sdp"
+                    android:fontFamily="@font/t_bold"
+                    android:text="@string/car_info_label"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_10ssp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <android.support.constraint.ConstraintLayout
+                    android:id="@+id/lay_info"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_17sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_marginEnd="@dimen/_17sdp"
+                    android:background="@drawable/rec5_black"
+                    android:backgroundTint="#393939"
+                    android:paddingBottom="@dimen/_9sdp"
+                    app:layout_constraintTop_toBottomOf="@id/info_label">
+
+
+                    <ImageView
+                        android:id="@+id/car_image"
+                        android:layout_width="@dimen/_95sdp"
+                        android:layout_height="@dimen/_57sdp"
+                        android:layout_marginStart="@dimen/_12sdp"
+                        android:layout_marginTop="@dimen/_14sdp"
+                        android:src="@drawable/car"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/car_name"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_17sdp"
+                        android:layout_marginEnd="@dimen/_17sdp"
+                        android:fontFamily="@font/t_bold"
+                        android:text="Toyota Tacoma 2019"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_14ssp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/car_image"
+                        app:layout_constraintTop_toTopOf="@id/car_image" />
+
+                    <TextView
+                        android:id="@+id/care_price_value"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_7sdp"
+                        android:layout_marginEnd="@dimen/_6sdp"
+                        android:background="@drawable/rec3"
+                        android:backgroundTint="@color/primary_dark"
+                        android:fontFamily="@font/t_bold"
+                        android:paddingStart="@dimen/_9sdp"
+                        android:paddingEnd="@dimen/_5sdp"
+                        android:paddingBottom="@dimen/_3sdp"
+                        android:text="100"
+                        android:textColor="#191919"
+                        android:textSize="@dimen/_13ssp"
+                        app:layout_constraintStart_toStartOf="@id/car_name"
+                        app:layout_constraintTop_toBottomOf="@id/car_name" />
+
+                    <TextView
+                        android:id="@+id/currency_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_4sdp"
+                        android:layout_marginEnd="@dimen/_17sdp"
+
+                        android:fontFamily="@font/t_regular"
+                        android:text="د.ك/يومياً"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_13ssp"
+                        app:layout_constraintBottom_toBottomOf="@id/care_price_value"
+                        app:layout_constraintStart_toEndOf="@id/care_price_value"
+                        app:layout_constraintTop_toTopOf="@id/care_price_value" />
+
+                    <TextView
+                        android:id="@+id/order_status_label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_6sdp"
+                        android:fontFamily="@font/t_regular"
+                        android:text="@string/order_status_label"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_11ssp"
+                        app:layout_constraintStart_toStartOf="@id/car_image"
+                        app:layout_constraintTop_toBottomOf="@id/car_image" />
+
+                    <TextView
+                        android:id="@+id/order_status_value"
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:layout_marginEnd="@dimen/_12sdp"
+                        android:fontFamily="@font/t_bold"
+
+                        android:text="تم التأكيد"
+                        android:textAlignment="viewStart"
+                        android:textColor="#FFA673"
+                        android:textSize="@dimen/_11ssp"
+                        app:layout_constraintBottom_toBottomOf="@id/order_status_label"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/order_status_label" />
+                </android.support.constraint.ConstraintLayout>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_32sdp"
+                    android:src="@drawable/ic_ex"
+                    app:layout_constraintStart_toEndOf="@id/view"
+                    app:layout_constraintTop_toBottomOf="@id/office_location" />
+
+                <TextView
+                    android:id="@+id/office_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_17sdp"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:fontFamily="@font/t_bold"
+                    android:text="@string/office_label"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_10ssp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/lay_info" />
+
+
+                <View
+                    android:id="@+id/view"
+                    android:layout_width="@dimen/_200sdp"
+                    android:layout_height="@dimen/_70sdp"
+                    android:layout_marginTop="@dimen/_11sdp"
+                    android:background="@drawable/rec5"
+                    android:backgroundTint="#393939"
+                    app:layout_constraintStart_toStartOf="@id/office_label"
+                    app:layout_constraintTop_toBottomOf="@id/office_label" />
+
+                <android.support.constraint.ConstraintLayout
+                    android:id="@+id/office_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:background="@color/transparent"
+                    app:layout_constraintStart_toStartOf="@id/view"
+                    app:layout_constraintTop_toTopOf="@id/view">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/t_medium"
+                        android:paddingStart="@dimen/_9sdp"
+
+                        android:paddingBottom="@dimen/_11sdp"
+                        android:text="شركة سوبر فاير لتأجير السيارات"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_11ssp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <View
+                        android:id="@+id/innerline"
+                        android:layout_width="@dimen/_170sdp"
+                        android:layout_height="1dp"
+                        android:layout_marginStart="@dimen/_7sdp"
+                        android:background="#707070"
+                        app:layout_constraintBottom_toBottomOf="@id/office_name"
+                        app:layout_constraintStart_toStartOf="@id/office_name" />
+
+
+                </android.support.constraint.ConstraintLayout>
+
+
+                <TextView
+                    android:id="@+id/address_value"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_35sdp"
+                    android:layout_marginEnd="@dimen/_17sdp"
+                    android:background="@drawable/rec5"
+                    android:backgroundTint="#393939"
+                    android:drawableStart="@drawable/map"
+                    android:drawablePadding="@dimen/_4sdp"
+                    android:fontFamily="@font/t_regular"
+                    android:paddingStart="@dimen/_9sdp"
+                    android:paddingTop="@dimen/_9sdp"
+                    android:paddingBottom="@dimen/_3sdp"
+                    android:text="المحافظة , المنطقة , رقم القطعة, رقم الشارع  رقم الجاده, رقم البناية , رقم الطابق , رقم الشقة"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_10ssp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@id/office_name"
+                    app:layout_constraintTop_toTopOf="@id/view" />
+
+                <TextView
+                    android:id="@+id/address_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_17sdp"
+                    android:layout_marginTop="@dimen/_12sdp"
+                    android:fontFamily="@font/t_bold"
+                    android:text="@string/address_label"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_10ssp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/address_value" />
+
+                <TextView
+                    android:id="@+id/delevry_address_value"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_9sdp"
+                    android:layout_marginEnd="@dimen/_17sdp"
+                    android:background="@drawable/rec5"
+                    android:backgroundTint="#393939"
+                    android:fontFamily="@font/t_regular"
+                    android:paddingStart="@dimen/_11sdp"
+                    android:paddingTop="@dimen/_6sdp"
+                    android:paddingEnd="@dimen/_11sdp"
+                    android:paddingBottom="@dimen/_6sdp"
+                    android:text="المحافظة , المنطقة , رقم القطعة, رقم الشارع  رقم الجاده, رقم البناية , رقم الطابق , رقم الشقة"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_11ssp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@id/office_name"
+                    app:layout_constraintTop_toBottomOf="@id/address_label" />
+
+                <TextView
+                    android:id="@+id/office_location"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_17sdp"
+                    android:background="@drawable/rec5_black_stroke"
+                    android:drawableStart="@drawable/map_icon"
+                    android:drawablePadding="@dimen/_5sdp"
+                    android:fontFamily="@font/t_bold"
+                    android:paddingStart="@dimen/_8sdp"
+                    android:paddingTop="@dimen/_5sdp"
+                    android:paddingEnd="@dimen/_12sdp"
+                    android:paddingBottom="@dimen/_6sdp"
+                    android:text="@string/map_cordinatiors_labe"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_10ssp"
+                    app:layout_constraintBottom_toBottomOf="@id/office_label"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/office_label" />
+
+                <ImageView
+                    android:id="@+id/whats_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginEnd="@dimen/_17sdp"
+                    android:background="@drawable/top_bottom"
+                    android:paddingStart="@dimen/_5sdp"
+                    android:paddingTop="@dimen/_4sdp"
+                    android:paddingEnd="@dimen/_5sdp"
+                    android:paddingBottom="@dimen/_6sdp"
+                    android:src="@drawable/whatsapp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/view" />
+
+
+                <ImageView
+                    android:id="@+id/phone_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_5sdp"
+                    android:background="@drawable/top_bottom"
+                    android:paddingStart="@dimen/_5sdp"
+                    android:paddingTop="@dimen/_5sdp"
+                    android:paddingEnd="@dimen/_5sdp"
+                    android:paddingBottom="@dimen/_7sdp"
+                    android:src="@drawable/phone"
+                    app:layout_constraintBottom_toBottomOf="@id/whats_icon"
+                    app:layout_constraintEnd_toStartOf="@id/whats_icon"
+                    app:layout_constraintTop_toTopOf="@id/whats_icon" />
+
+                <ImageView
+                    android:id="@id/innerline"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_17sdp"
+                    android:layout_marginTop="@dimen/_11sdp"
+                    android:layout_marginEnd="@dimen/_17sdp"
+                    android:background="@drawable/line"
+                    app:layout_constraintTop_toBottomOf="@id/delevry_address_value" />
+
+                <android.support.constraint.ConstraintLayout
+                    android:id="@+id/from_time_lay"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_12sdp"
+                    android:layout_marginEnd="@dimen/_5sdp"
+                    android:background="@drawable/rec5"
+                    android:backgroundTint="#393939"
+                    app:layout_constraintEnd_toStartOf="@id/end_time_lay"
+                    app:layout_constraintStart_toStartOf="@id/office_label"
+                    app:layout_constraintTop_toBottomOf="@id/innerline">
+
+                    <TextView
+                        android:id="@+id/date_label_from"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_13sdp"
+                        android:layout_marginTop="@dimen/_15sdp"
+                        android:fontFamily="@font/t_regular"
+                        android:text="@string/from_rent_date"
+                        android:textColor="#CCFFFFFF"
+                        android:textSize="@dimen/_10ssp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/date_value_from"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:fontFamily="@font/t_regular"
+                        android:paddingBottom="@dimen/_7sdp"
+                        android:text="05 July, 04.00 PM"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_11ssp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="@id/date_label_from"
+                        app:layout_constraintTop_toBottomOf="@id/date_label_from" />
+
+
+                </android.support.constraint.ConstraintLayout>
+
+                <android.support.constraint.ConstraintLayout
+                    android:id="@+id/end_time_lay"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_17sdp"
+                    android:background="@drawable/rec5"
+                    android:backgroundTint="#393939"
+                    app:layout_constraintBottom_toBottomOf="@id/from_time_lay"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/from_time_lay"
+                    app:layout_constraintTop_toTopOf="@id/from_time_lay">
+
+                    <TextView
+                        android:id="@+id/date_label_end"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_16sdp"
+                        android:layout_marginTop="@dimen/_15sdp"
+                        android:fontFamily="@font/t_regular"
+                        android:text="@string/to_rent_date"
+                        android:textColor="#CCFFFFFF"
+                        android:textSize="@dimen/_10ssp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/date_valu_end"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:fontFamily="@font/t_regular"
+                        android:paddingBottom="@dimen/_7sdp"
+                        android:text="05 July, 04.00 PM"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_11ssp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="@id/date_label_end"
+                        app:layout_constraintTop_toBottomOf="@id/date_label_end" />
+
+
+                </android.support.constraint.ConstraintLayout>
+
+
+                <ImageView
+                    android:id="@+id/from_to_image"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_to_icon"
+                    app:layout_constraintBottom_toBottomOf="@id/from_time_lay"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/from_time_lay" />
+
+                <android.support.constraint.ConstraintLayout
+                    android:id="@+id/payment_lay"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:background="@drawable/rec5"
+                    android:backgroundTint="#393939"
+                    android:paddingTop="@dimen/_13sdp"
+                    android:paddingBottom="@dimen/_14sdp"
+                    app:layout_constraintEnd_toEndOf="@id/end_time_lay"
+                    app:layout_constraintStart_toStartOf="@id/from_time_lay"
+                    app:layout_constraintTop_toBottomOf="@id/from_time_lay">
+
+
+                    <TextView
+
+                        android:id="@+id/payment_method_label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/t_regular"
+                        android:paddingStart="@dimen/_11sdp"
+
+                        android:text="@string/payment_method_label2"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_11ssp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/payment_method_type"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/t_bold"
+                        android:paddingEnd="@dimen/_13sdp"
+
+                        android:text="إلكتروني"
+                        android:textColor="#FFA673"
+                        android:textSize="@dimen/_10ssp"
+                        app:layout_constraintBottom_toBottomOf="@id/payment_image"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/payment_image" />
+
+                    <ImageView
+                        android:id="@+id/payment_image"
+                        android:layout_width="@dimen/_32sdp"
+                        android:layout_height="@dimen/_17sdp"
+                        android:layout_marginEnd="@dimen/_5sdp"
+                        android:src="@drawable/visa"
+                        android:text="إلكتروني"
+                        android:textAlignment="viewStart"
+                        app:layout_constraintBottom_toBottomOf="@id/payment_method_label"
+                        app:layout_constraintEnd_toStartOf="@id/payment_method_type"
+                        app:layout_constraintTop_toTopOf="@id/payment_method_label" />
+
+                </android.support.constraint.ConstraintLayout>
+
+
+                <android.support.constraint.ConstraintLayout
+                    android:id="@+id/driver_lay"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:background="@drawable/rec5"
+                    android:backgroundTint="#393939"
+                    android:paddingTop="@dimen/_16sdp"
+                    android:paddingBottom="@dimen/_17sdp"
+                    app:layout_constraintEnd_toEndOf="@id/payment_lay"
+                    app:layout_constraintStart_toStartOf="@id/payment_lay"
+                    app:layout_constraintTop_toBottomOf="@id/payment_lay">
+
+
+                    <TextView
+
+                        android:id="@+id/diver_label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/t_regular"
+                        android:paddingStart="@dimen/_11sdp"
+                        android:text="@string/driver_is_label"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_11ssp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/has_driver"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/t_bold"
+                        android:gravity="center"
+                        android:paddingEnd="@dimen/_13sdp"
+
+                        android:text="نعم"
+                        android:textColor="#FFA673"
+                        android:textSize="@dimen/_10ssp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+
+                </android.support.constraint.ConstraintLayout>
+            </android.support.constraint.ConstraintLayout>
+        </android.support.v4.widget.NestedScrollView>
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/price_details_lay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#393939"
+            android:paddingBottom="@dimen/_19sdp"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <TextView
+                android:id="@+id/total_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_16sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:fontFamily="@font/t_medium"
+                android:text="@string/total_price"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_13ssp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/total_price_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_11sdp"
+                android:background="@drawable/rec3"
+                android:backgroundTint="@color/primary_dark"
+                android:fontFamily="@font/t_bold"
+                android:paddingStart="@dimen/_9sdp"
+                android:paddingEnd="@dimen/_5sdp"
+                android:paddingBottom="@dimen/_3sdp"
+                android:text="100"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_13ssp"
+                app:layout_constraintBottom_toBottomOf="@id/total_label"
+                app:layout_constraintStart_toEndOf="@id/total_label"
+                app:layout_constraintTop_toTopOf="@id/total_label" />
+
+            <TextView
+                android:id="@+id/currency_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_6sdp"
+                android:fontFamily="@font/t_regular"
+
+                android:text="د.ك"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_13ssp"
+                app:layout_constraintBottom_toBottomOf="@id/total_price_value"
+                app:layout_constraintStart_toEndOf="@id/total_price_value"
+                app:layout_constraintTop_toTopOf="@id/total_price_value" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableEnd="@drawable/ic_icon_bak_orange"
+                android:drawablePadding="@dimen/_9sdp"
+                android:fontFamily="@font/t_regular"
+                android:paddingEnd="@dimen/_17sdp"
+                android:text="@string/details_label"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_13ssp"
+                app:layout_constraintBottom_toBottomOf="@id/total_label"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/total_label" />
+        </android.support.constraint.ConstraintLayout>
+    </android.support.constraint.ConstraintLayout>
+
+
+</android.support.design.widget.CoordinatorLayout>

@@ -1,0 +1,368 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#191919"
+    android:layoutDirection="locale">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/transparent"
+        app:elevation="0dp">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/home_toolbar"
+            style="@style/CustomActionBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/primary_dark"
+            android:elevation="0dp"
+            android:minHeight="?actionBarSize"
+            app:contentInsetEnd="0dp"
+            app:contentInsetStart="0sp"
+            app:contentInsetStartWithNavigation="0dp">
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layoutDirection="locale"
+                android:orientation="vertical"
+                android:textDirection="locale">
+
+                <TextView
+                    android:id="@+id/logo_imageView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="?actionBarSize"
+                    android:fontFamily="@font/t_bold"
+                    android:padding="@dimen/_8sdp"
+                    android:text="@string/home"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_13ssp"
+
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </android.support.constraint.ConstraintLayout>
+        </android.support.v7.widget.Toolbar>
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        app:layout_behavior="android.support.design.widget.AppBarLayout$ScrollingViewBehavior"
+
+        >
+
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            >
+
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/map_lay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="visible"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <fragment
+                    android:id="@+id/map2"
+                    android:name="com.google.android.gms.maps.SupportMapFragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_350sdp"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/marker"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_marginTop="@dimen/_50sdp"
+
+                    android:src="@drawable/ic_pin"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                  />
+
+            </android.support.constraint.ConstraintLayout>
+
+
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/lay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/primary_dark"
+                app:layout_constraintBottom_toBottomOf="@id/map_lay">
+
+                <TextView
+                    android:id="@+id/gove_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_20sdp"
+                    android:layout_marginTop="@dimen/_9sdp"
+                    android:fontFamily="@font/t_medium"
+                    android:text="@string/gove_label"
+                    android:textColor="#F2F2FF"
+                    android:textSize="@dimen/_10ssp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/area_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_20sdp"
+                    android:fontFamily="@font/t_medium"
+                    android:text="@string/area_label"
+                    android:textColor="#F2F2FF"
+                    android:textSize="@dimen/_10ssp"
+                    app:layout_constraintBottom_toBottomOf="@id/gove_label"
+                    app:layout_constraintEnd_toStartOf="@id/block_label"
+                    app:layout_constraintStart_toEndOf="@id/gove_label"
+                    app:layout_constraintTop_toTopOf="@id/gove_label" />
+
+
+                <TextView
+                    android:id="@+id/block_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_20sdp"
+                    android:fontFamily="@font/t_medium"
+                    android:text="@string/block_label"
+                    android:textColor="#F2F2FF"
+                    android:textSize="@dimen/_10ssp"
+                    app:layout_constraintBottom_toBottomOf="@id/gove_label"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/area_label"
+                    app:layout_constraintTop_toTopOf="@id/gove_label" />
+
+
+                <TextView
+                    android:id="@+id/gove_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_6sdp"
+                    android:fontFamily="@font/t_medium"
+                    android:text="محافظة حولي"
+                    android:textColor="#191919"
+                    android:textSize="@dimen/_10ssp"
+                    app:layout_constraintEnd_toEndOf="@id/gove_label"
+                    app:layout_constraintStart_toStartOf="@id/gove_label"
+                    app:layout_constraintTop_toBottomOf="@id/gove_label" />
+
+
+                <TextView
+                    android:id="@+id/area_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:fontFamily="@font/t_medium"
+                    android:text="منطقة السالمية"
+                    android:textColor="#191919"
+                    android:textSize="@dimen/_10ssp"
+                    app:layout_constraintBottom_toBottomOf="@id/gove_value"
+                    app:layout_constraintEnd_toEndOf="@id/area_label"
+                    app:layout_constraintStart_toStartOf="@id/area_label"
+
+                    app:layout_constraintTop_toTopOf="@id/gove_value" />
+
+                <TextView
+                    android:id="@+id/block_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/oval"
+                    android:fontFamily="@font/t_medium"
+                    android:gravity="center"
+                    android:text="05"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_9ssp"
+                    app:layout_constraintBottom_toBottomOf="@id/gove_value"
+                    app:layout_constraintEnd_toEndOf="@id/block_label"
+                    app:layout_constraintStart_toStartOf="@id/block_label"
+                    app:layout_constraintTop_toTopOf="@id/gove_value" />
+
+
+                <TextView
+                    android:id="@+id/street_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_20sdp"
+                    android:layout_marginTop="@dimen/_9sdp"
+                    android:fontFamily="@font/t_medium"
+                    android:text="@string/street_label_name"
+                    android:textColor="#F2F2FF"
+                    android:textSize="@dimen/_10ssp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/innerline" />
+
+                <View
+                    android:id="@+id/innerline"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginStart="@dimen/_20sdp"
+                    android:layout_marginEnd="@dimen/_20sdp"
+                    android:background="@drawable/line_districted"
+
+
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/street_value"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_20sdp"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    android:layout_marginEnd="@dimen/_25sdp"
+                    android:layout_marginBottom="@dimen/_8sdp"
+                    android:fontFamily="@font/t_medium"
+                    android:lines="2"
+                    android:text="شارع عبد العزيز بن محمد الثاني شارع عبد العزيز بن
+محمد الثاني "
+                    android:textAlignment="viewStart"
+                    android:textColor="#191919"
+                    android:textSize="@dimen/_10ssp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/street_label" />
+            </android.support.constraint.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:fontFamily="@font/t_bold"
+                android:text="@string/reservation_time"
+                android:textAlignment="viewStart"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_10ssp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/lay" />
+
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/from_time_lay"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_13sdp"
+                android:layout_marginEnd="@dimen/_5sdp"
+                android:background="@drawable/rec5"
+                android:backgroundTint="@color/primary_dark"
+                app:layout_constraintEnd_toStartOf="@id/end_time_lay"
+                app:layout_constraintStart_toStartOf="@id/label"
+                app:layout_constraintTop_toBottomOf="@id/label">
+
+                <TextView
+                    android:id="@+id/date_label_from"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_13sdp"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:fontFamily="@font/t_regular"
+                    android:text="@string/from_rent_date"
+                    android:textColor="#CCFFFFFF"
+                    android:textSize="@dimen/_10ssp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/date_value_from"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:fontFamily="@font/t_regular"
+                    android:paddingBottom="@dimen/_7sdp"
+                    android:text="05 July, 04.00 PM"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_11ssp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="@id/date_label_from"
+                    app:layout_constraintTop_toBottomOf="@id/date_label_from" />
+
+
+            </android.support.constraint.ConstraintLayout>
+
+
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/end_time_lay"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_20sdp"
+                android:background="@drawable/rec5"
+                android:backgroundTint="@color/primary_dark"
+                app:layout_constraintBottom_toBottomOf="@id/from_time_lay"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/from_time_lay"
+                app:layout_constraintTop_toTopOf="@id/from_time_lay">
+
+                <TextView
+                    android:id="@+id/date_label_end"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_16sdp"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:fontFamily="@font/t_regular"
+                    android:text="@string/to_rent_date"
+                    android:textColor="#CCFFFFFF"
+                    android:textSize="@dimen/_10ssp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/date_valu_end"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:fontFamily="@font/t_regular"
+                    android:paddingBottom="@dimen/_7sdp"
+                    android:text="05 July, 04.00 PM"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_11ssp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="@id/date_label_end"
+                    app:layout_constraintTop_toBottomOf="@id/date_label_end" />
+
+
+            </android.support.constraint.ConstraintLayout>
+
+            <ImageView
+                android:id="@+id/from_to_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/to"
+                app:layout_constraintBottom_toBottomOf="@id/from_time_lay"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/from_time_lay" />
+
+
+            <Button
+                android:id="@+id/show_cars"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_marginEnd="@dimen/_20sdp"
+                android:layout_marginBottom="@dimen/_23sdp"
+                android:background="@drawable/rec25"
+                android:fontFamily="@font/t_bold"
+                android:paddingTop="@dimen/_9sdp"
+                android:paddingBottom="@dimen/_9sdp"
+                android:text="@string/show_cars_label"
+                android:textColor="#272424"
+                android:textSize="@dimen/_13ssp"
+                android:textAllCaps="false"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/from_time_lay" />
+
+        </android.support.constraint.ConstraintLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+</android.support.design.widget.CoordinatorLayout>

@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/design_bottom_sheet"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/shape_button_sheet_background">
+
+    <ImageView
+        android:id="@+id/dismiss_action"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_17sdp"
+        android:layout_marginTop="@dimen/_19sdp"
+        android:padding="@dimen/_4sdp"
+        android:src="@drawable/ic_back_white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/t_bold"
+        android:text="@string/filter_label2"
+        android:textColor="#191919"
+        android:textSize="@dimen/_14ssp"
+        app:layout_constraintBottom_toBottomOf="@id/dismiss_action"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/dismiss_action" />
+
+    <com.jaredrummler.materialspinner.MaterialSpinner
+        android:id="@+id/car_name_spinner"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/_39sdp"
+        android:layout_marginStart="@dimen/_17sdp"
+        android:layout_marginTop="@dimen/_13sdp"
+        android:layout_marginEnd="@dimen/_17sdp"
+        android:fontFamily="@font/t_bold"
+        android:hint="BMW"
+        android:textAlignment="viewStart"
+        android:textColor="#1B1B2F"
+        android:textColorHint="#1B1B2F"
+        android:textSize="@dimen/_11ssp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/title"
+        app:ms_background_selector="@drawable/rec5_spinner"
+
+        app:ms_hide_arrow="false"
+        app:ms_hint="BMW"
+        app:ms_hint_color="#1B1B2F" />
+
+
+    <com.jaredrummler.materialspinner.MaterialSpinner
+        android:id="@+id/type_spinner"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/_39sdp"
+        android:layout_marginStart="@dimen/_17sdp"
+        android:layout_marginTop="@dimen/_9sdp"
+        android:layout_marginEnd="@dimen/_17sdp"
+        android:fontFamily="@font/t_medium"
+        android:hint="@string/choose_type"
+        android:textAlignment="viewStart"
+        android:textColor="#1B1B2F"
+        android:textColorHint="#1B1B2F"
+        android:textSize="@dimen/_11ssp"
+        app:layout_constraintEnd_toStartOf="@id/model_spinner"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/car_name_spinner"
+        app:ms_background_selector="@drawable/rec5_spinner"
+
+        app:ms_hide_arrow="false"
+        app:ms_hint="@string/choose_type"
+        app:ms_hint_color="#1B1B2F" />
+
+    <com.jaredrummler.materialspinner.MaterialSpinner
+        android:id="@+id/model_spinner"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/_39sdp"
+        android:layout_marginEnd="@dimen/_17sdp"
+        android:fontFamily="@font/t_medium"
+        android:hint="@string/model_label"
+        android:textAlignment="viewStart"
+        android:textColor="#1B1B2F"
+        android:textColorHint="#1B1B2F"
+        android:textSize="@dimen/_11ssp"
+        app:layout_constraintBottom_toBottomOf="@id/type_spinner"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/type_spinner"
+        app:layout_constraintTop_toTopOf="@id/type_spinner"
+        app:ms_background_selector="@drawable/rec5_spinner"
+        app:ms_hide_arrow="false"
+        app:ms_hint="@string/model_label"
+        app:ms_hint_color="#1B1B2F" />
+
+    <TextView
+        android:id="@+id/spare_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_12sdp"
+        android:fontFamily="@font/t_extra_bold"
+        android:text="@string/spare_type"
+        android:textColor="#191919"
+        android:textSize="@dimen/_11ssp"
+        app:layout_constraintStart_toStartOf="@id/type_spinner"
+        app:layout_constraintTop_toBottomOf="@id/type_spinner" />
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/lay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_17sdp"
+        android:layout_marginTop="@dimen/_9sdp"
+        android:layout_marginEnd="@dimen/_17sdp"
+        android:background="@drawable/rec5"
+        android:backgroundTint="#CC5E1F"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/spare_type">
+
+
+        <TextView
+            android:id="@+id/automatic_action"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_12sdp"
+            android:background="@drawable/rec5_black"
+            android:fontFamily="@font/t_bold"
+            android:gravity="center"
+            android:paddingTop="@dimen/_10sdp"
+            android:paddingBottom="@dimen/_12sdp"
+            android:text="@string/outamatic_typr"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_11ssp"
+            app:layout_constraintEnd_toStartOf="@id/normal_action"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/normal_action"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:fontFamily="@font/t_bold"
+            android:gravity="center"
+            android:paddingTop="@dimen/_10sdp"
+            android:paddingBottom="@dimen/_12sdp"
+            android:text="@string/normal_type"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_11ssp"
+            app:layout_constraintBottom_toBottomOf="@id/automatic_action"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/automatic_action"
+            app:layout_constraintTop_toTopOf="@id/automatic_action" />
+    </android.support.constraint.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/age_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:fontFamily="@font/t_extra_bold"
+        android:text="@string/age_label"
+        android:textColor="#191919"
+        android:textSize="@dimen/_10ssp"
+        app:layout_constraintStart_toStartOf="@id/spare_type"
+        app:layout_constraintTop_toBottomOf="@id/lay" />
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/age_lay"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_15sdp"
+        android:background="@drawable/rec5"
+        android:backgroundTint="#CC5E1F"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/age_label"
+        app:layout_constraintTop_toBottomOf="@id/age_label">
+
+        <EditText
+            android:id="@+id/age_edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/transparent"
+            android:fontFamily="@font/t_regular"
+            android:hint="@string/age_label_example"
+            android:inputType="number"
+            android:paddingStart="@dimen/_17sdp"
+            android:paddingTop="@dimen/_11sdp"
+            android:paddingBottom="@dimen/_13sdp"
+            android:textAlignment="viewStart"
+            android:textColorHint="#80FFFFFF"
+            app:layout_constraintStart_toEndOf="@id/label_yaer"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/label_yaer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_12sdp"
+            android:fontFamily="@font/t_bold"
+            android:text="@string/year_label"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_13sdp"
+            app:layout_constraintBottom_toBottomOf="@id/age_edit"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/age_edit" />
+
+    </android.support.constraint.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/daily_cost"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:fontFamily="@font/t_extra_bold"
+        android:text="@string/daily_cost_label"
+        android:textColor="#191919"
+        android:textSize="@dimen/_10ssp"
+        app:layout_constraintStart_toStartOf="@id/age_lay"
+        app:layout_constraintTop_toBottomOf="@id/age_lay" />
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/price_lay"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:background="@drawable/rec5"
+        android:backgroundTint="#CC5E1F"
+        app:layout_constraintEnd_toEndOf="@id/age_lay"
+
+        app:layout_constraintStart_toStartOf="@id/age_lay"
+        app:layout_constraintTop_toBottomOf="@id/daily_cost">
+
+        <EditText
+            android:id="@+id/peice_edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/transparent"
+            android:fontFamily="@font/t_bold"
+            android:inputType="numberDecimal"
+            android:paddingStart="@dimen/_17sdp"
+            android:paddingTop="@dimen/_11sdp"
+            android:paddingBottom="@dimen/_13sdp"
+            android:text="250"
+            android:textAlignment="viewStart"
+            android:textColor="@color/white"
+            android:textColorHint="#80FFFFFF"
+            android:textSize="@dimen/_13ssp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/currency"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_12sdp"
+            android:fontFamily="@font/t_bold"
+            android:text="د.ك"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_13sdp"
+            app:layout_constraintBottom_toBottomOf="@id/peice_edit"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/peice_edit" />
+
+    </android.support.constraint.ConstraintLayout>
+
+    <Button
+        android:id="@+id/filter_action"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_25sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:background="@drawable/rec25"
+        android:backgroundTint="#191919"
+        android:fontFamily="@font/t_medium"
+        android:text="@string/filter_action_label"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_13ssp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/rest_action"
+        app:layout_constraintStart_toStartOf="@id/age_lay"
+        app:layout_constraintTop_toBottomOf="@id/price_lay" />
+
+    <Button
+        android:id="@+id/rest_action"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_3sdp"
+
+        android:layout_marginEnd="@dimen/_14sdp"
+        android:background="@drawable/rec25_stroke"
+        android:drawableStart="@drawable/reset_label"
+        android:drawablePadding="@dimen/_7sdp"
+        android:fontFamily="@font/t_medium"
+        android:paddingStart="@dimen/_20sdp"
+        android:text="@string/rest_label"
+        android:textAlignment="viewStart"
+        android:textAllCaps="false"
+        android:textColor="#191919"
+        android:textSize="@dimen/_13ssp"
+        app:layout_constraintBottom_toBottomOf="@id/filter_action"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/filter_action"
+        app:layout_constraintTop_toTopOf="@id/filter_action" />
+
+</android.support.constraint.ConstraintLayout>

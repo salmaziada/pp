@@ -1,0 +1,82 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">@color/primary_dark</item>
+        <item name="windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+        <item name="colorPrimaryDark">@color/primary_dark</item>
+        <item name="android:fontFamily">@font/t_bold</item>
+        <item name="colorAccent">@color/primary</item>
+        <item name="android:navigationBarColor">#272424</item>
+
+    </style>
+
+    <style name="CustomActionBar" parent="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+        <item name="android:windowActionBarOverlay">true</item>
+        <!-- Support library compatibility -->
+        <item name="windowActionBarOverlay">true</item>
+        <item name="colorControlNormal">@color/primary_dark</item>
+        <item name="android:textColorPrimary">@color/primary_dark</item>
+        <item name="android:textColorSecondary">@color/primary_dark</item>
+        <item name="actionMenuTextColor">@color/primary_dark</item>
+        <item name="android:background">@color/primary_dark</item>
+    </style>
+
+    <style name="SpinnerTheme" parent="android:Widget.Spinner">
+        <item name="android:background">@drawable/rewind</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+    <style name="RadioButtonStyle" parent="AppTheme">
+        <item name="colorControlNormal">#FFA673</item>
+        <item name="colorAccent">@color/bron</item>
+        <item name="android:textColorSecondary">@color/bron</item>
+    </style>
+    <style name="RadioButtonStyle2" parent="AppTheme">
+        <item name="colorControlNormal">@color/gray</item>
+        <item name="colorAccent">@color/bron</item>
+        <item name="android:textColorSecondary">@color/bron</item>
+    </style>
+
+    <style name="bottom_nav_text_appearance" parent="Widget.MaterialComponents.BottomNavigationView.Colored">
+        <item name="android:textColor">@color/primary_dark</item>
+    </style>
+
+    <style name="bottom_nav_inactive_text_appearance">
+        <item name="android:textColor">@color/white</item>
+
+    </style>
+
+
+    <style name="CalenderViewCustom" parent="Theme.AppCompat">
+        <item name="colorAccent">@color/primary_dark</item>
+    </style>
+
+    <style name="CalenderViewDateCustomText" parent="android:TextAppearance.DeviceDefault.Small">
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="CalenderViewWeekCustomText" parent="android:TextAppearance.DeviceDefault.Small">
+        <item name="android:textColor">@color/white</item>
+
+    </style>
+
+    <style name="SCBSwitch" parent="Theme.AppCompat.Light">
+        <item name="colorControlActivated">@color/blak</item>
+        <item name="colorAccent">@color/white</item>
+        <item name="android:colorForeground">@color/blak</item>
+    </style>
+
+    <style name="checkBox" parent="AppTheme">
+        <item name="colorControlNormal">@color/white</item>
+        <item name="colorAccent">@color/blak</item>
+        <item name="android:textColorSecondary">@color/blak</item>
+    </style>
+</resources>

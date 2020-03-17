@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/rent_car"
+        android:icon="@drawable/car"
+        android:title="@string/title" />
+
+    <item
+        android:id="@+id/explore_cars"
+        android:icon="@drawable/explore"
+        android:title="@string/title2"
+        />
+
+    <item
+        android:id="@+id/orders"
+        android:icon="@drawable/file"
+        android:title="@string/orders" />
+
+    <item
+        android:id="@+id/settings"
+        android:icon="@drawable/build"
+        android:title="@string/settings" />
+
+
+
+</menu>

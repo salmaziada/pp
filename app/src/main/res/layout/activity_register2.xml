@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/primary_dark"
+    android:layoutDirection="locale"
+    android:textDirection="locale">
+
+    <include layout="@layout/toolbar" />
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+
+        app:layout_behavior="android.support.design.widget.AppBarLayout$ScrollingViewBehavior">
+
+
+        <android.support.constraint.ConstraintLayout
+            android:focusableInTouchMode="true"
+            android:layoutDirection="locale"
+            android:orientation="vertical"
+            android:textDirection="locale"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context="net.selsela.carRental.ui.auoth.RegisterActivity">
+            <ImageView
+                android:id="@+id/mask"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_219sdp"
+                android:background="@drawable/ic_mask_group"
+                android:visibility="visible"
+                app:layout_constraintBottom_toBottomOf="@id/register_btn"
+                app:layout_constraintEnd_toEndOf="parent"
+              />
+
+            <ImageView
+                android:id="@+id/backgroundView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/back_login"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/logo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_27sdp"
+                android:src="@drawable/logo"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_30sdp"
+                android:fontFamily="@font/t_medium"
+                android:text="@string/register_label"
+                android:textAlignment="viewStart"
+                android:textColor="#191919"
+                android:textSize="@dimen/_20ssp"
+                app:layout_constraintBottom_toBottomOf="@id/backgroundView"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+
+            <TextView
+                android:id="@+id/name_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_17sdp"
+                android:layout_marginTop="@dimen/_30sdp"
+                android:fontFamily="@font/t_medium"
+                android:text="@string/full_name_label"
+                android:textColor="#191919"
+                android:textSize="@dimen/_10ssp"
+
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/backgroundView" />
+
+            <android.support.v7.widget.AppCompatEditText
+                android:id="@+id/name_edit"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_9sdp"
+                android:layout_marginEnd="@dimen/_17sdp"
+                android:background="@drawable/rec5"
+                android:backgroundTint="#CC5E1F"
+                android:fontFamily="@font/t_regular"
+                android:hint="@string/name_example_label"
+                android:inputType="textPersonName"
+                android:paddingStart="@dimen/_17sdp"
+                android:paddingTop="@dimen/_10sdp"
+                android:paddingBottom="@dimen/_13sdp"
+                android:textAlignment="viewStart"
+                android:textColorHint="#80FFFFFF"
+                android:textSize="@dimen/_13ssp"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@id/name_label"
+                app:layout_constraintTop_toBottomOf="@id/name_label" />
+
+
+            <TextView
+                android:id="@+id/mobile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_11sdp"
+                android:fontFamily="@font/t_medium"
+                android:text="@string/mobile_num"
+                android:textColor="#191919"
+                android:textSize="@dimen/_10ssp"
+                app:layout_constraintStart_toStartOf="@id/name_label"
+                app:layout_constraintTop_toBottomOf="@id/name_edit" />
+
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/mobile_lay"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_15sdp"
+                android:background="@drawable/rec5"
+                android:backgroundTint="#CC5E1F"
+                android:elevation="1dp"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@id/name_label"
+                app:layout_constraintTop_toBottomOf="@id/mobile">
+
+                <EditText
+                    android:id="@+id/mobile_editText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/transparent"
+                    android:fontFamily="@font/t_regular"
+                    android:hint="@string/mobile_example"
+                    android:inputType="phone"
+                    android:paddingStart="@dimen/_17sdp"
+                    android:paddingTop="@dimen/_11sdp"
+                    android:paddingBottom="@dimen/_13sdp"
+                    android:textAlignment="viewStart"
+                    android:textColorHint="#80FFFFFF"
+                    android:textSize="@dimen/_13ssp"
+                    app:layout_constraintStart_toEndOf="@id/country_key"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/country_key"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_12sdp"
+                    android:fontFamily="@font/t_bold"
+                    android:text="+965"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_13ssp"
+                    app:layout_constraintBottom_toBottomOf="@id/mobile_editText"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/mobile_editText" />
+
+            </android.support.constraint.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/eamil_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_11sdp"
+                android:fontFamily="@font/t_medium"
+                android:text="@string/emaily_label"
+                android:textColor="#191919"
+                android:textSize="@dimen/_10ssp"
+                app:layout_constraintStart_toStartOf="@id/name_label"
+                app:layout_constraintTop_toBottomOf="@id/mobile_lay" />
+
+            <android.support.v7.widget.AppCompatEditText
+                android:id="@+id/email_editText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_9sdp"
+                android:layout_marginEnd="@dimen/_17sdp"
+                android:background="@drawable/rec5"
+                android:backgroundTint="#CC5E1F"
+                android:elevation="1dp"
+                android:fontFamily="@font/t_regular"
+                android:hint="@string/email_example_label"
+                android:inputType="textEmailAddress"
+                android:paddingStart="@dimen/_17sdp"
+                android:paddingTop="@dimen/_10sdp"
+                android:paddingBottom="@dimen/_13sdp"
+                android:textAlignment="viewStart"
+                android:textColorHint="#80FFFFFF"
+                android:textSize="@dimen/_13ssp"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@id/name_label"
+                app:layout_constraintTop_toBottomOf="@id/eamil_label" />
+
+            <TextView
+                android:id="@+id/pass_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_11sdp"
+                android:fontFamily="@font/t_medium"
+                android:text="@string/password"
+                android:textColor="#191919"
+                android:textSize="@dimen/_10ssp"
+                app:layout_constraintStart_toStartOf="@id/name_label"
+                app:layout_constraintTop_toBottomOf="@id/email_editText" />
+
+            <LinearLayout
+                android:id="@+id/confim_pass_lay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_17sdp"
+                android:layout_marginTop="@dimen/_9sdp"
+                android:layout_marginEnd="@dimen/_17sdp"
+                android:background="@drawable/rec5"
+                android:backgroundTint="#CC5E1F"
+                android:elevation="1dp"
+                android:orientation="horizontal"
+
+                app:layout_constraintTop_toBottomOf="@id/pass_label">
+
+                <android.support.v7.widget.AppCompatEditText
+                    android:id="@+id/confrim_new_pass"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/transparent"
+                    android:fontFamily="@font/t_regular"
+                    android:hint="***********"
+                    android:inputType="textPassword"
+
+                    android:paddingStart="@dimen/_16sdp"
+                    android:paddingTop="@dimen/_13sdp"
+                    android:paddingBottom="@dimen/_10sdp"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white"
+                    android:textSize="@dimen/_13ssp" />
+
+                <CheckBox
+                    android:id="@+id/checkbox2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:button="@drawable/switch_selector"
+                    android:checked="false"
+                    android:padding="@dimen/_4sdp"
+                    android:paddingEnd="@dimen/_10sdp" />
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/register_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_17sdp"
+                android:layout_marginEnd="@dimen/_17sdp"
+                android:layout_marginBottom="@dimen/_20sdp"
+                android:background="@drawable/rec25"
+                android:backgroundTint="#191919"
+                android:fontFamily="@font/t_medium"
+                android:paddingTop="@dimen/_9sdp"
+                android:paddingBottom="@dimen/_9sdp"
+                android:text="@string/register_label2"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_13ssp"
+
+                android:layout_marginTop="@dimen/_18sdp"
+                app:layout_constraintTop_toBottomOf="@id/confim_pass_lay"
+                app:layout_constraintBottom_toBottomOf="parent" />
+
+
+        </android.support.constraint.ConstraintLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+</android.support.design.widget.CoordinatorLayout>

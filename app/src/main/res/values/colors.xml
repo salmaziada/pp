@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="primary">#222222</color>
+    <color name="primary_dark">#EF7833</color>
+    <color name="accent">#FFFFFF</color>
+    <color name="gray">#ffdfdfdf</color>
+    <color name="grayy">#33132737</color>
+    <color name="gray_selected">#40FFFFFF</color>
+
+    <color name = "blue">#132737</color>
+    <color name = "blue4">#0D132737</color>
+<color name="blak">#191919</color>
+    <color name = "bron">#AC8C4A</color>
+    <color name = "blue2">#2B3D4B</color>
+    <color name = "blue3">#374855</color>
+    <color name="reportcolor1">#4D5F6D</color>
+    <color name="reportcolor2">#7F8C96</color>
+    <color name="reportcolorselector">#BDAA86</color>
+    <color name="devider">#6F7B85</color>
+    <color name="problem">#40505D</color>
+    <color name="gray2">#EFF0F1</color>
+    <color name="gray_yellow">#959382</color>
+<color name="nav_color">#272424</color>
+    <color name="red_color">#F15656</color>
+
+
+
+</resources>
+    <!--100% — FF-->
+    <!--95% — F2-->
+    <!--90% — E6-->
+    <!--85% — D9-->
+    <!--80% — CC-->
+    <!--75% — BF-->
+    <!--70% — B3-->
+    <!--65% — A6-->
+    <!--60% — 99-->
+    <!--55% — 8C-->
+    <!--50% — 80-->
+    <!--45% — 73-->
+    <!--40% — 66-->
+    <!--35% — 59-->
+    <!--30% — 4D-->
+    <!--25% — 40-->
+    <!--20% — 33-->
+    <!--15% — 26-->
+    <!--10% — 1A-->
+    <!--5% — 0D-->
+    <!--0% — 00-->

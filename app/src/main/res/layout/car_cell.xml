@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/_8sdp"
+    android:background="#EF7833">
+
+    <ImageView
+        android:id="@+id/car_image"
+        android:layout_width="@dimen/_100sdp"
+        android:layout_height="@dimen/_83sdp"
+        android:layout_marginStart="@dimen/_7sdp"
+        android:layout_marginTop="@dimen/_6sdp"
+        android:src="@drawable/car"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/car_model"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_5sdp"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:fontFamily="@font/t_bold"
+        android:text="BMW 3 Series 2019"
+        android:textAlignment="viewStart"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_14ssp"
+        app:layout_constraintStart_toEndOf="@id/car_image"
+        app:layout_constraintTop_toTopOf="@id/car_image" />
+
+    <TextView
+        android:id="@+id/price_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_11sdp"
+        android:background="@drawable/rec3"
+        android:fontFamily="@font/t_bold"
+        android:gravity="center"
+        android:paddingStart="@dimen/_7sdp"
+        android:paddingEnd="@dimen/_7sdp"
+        android:text="205"
+
+        android:textColor="@color/white"
+        android:textSize="@dimen/_10ssp"
+        app:layout_constraintStart_toStartOf="@id/car_model"
+        app:layout_constraintTop_toBottomOf="@id/car_model" />
+
+    <TextView
+        android:id="@+id/currency"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_6sdp"
+        android:fontFamily="@font/t_medium"
+        android:text="دينار كويتي / يومياً"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_10ssp"
+        android:textAlignment="viewStart"
+        app:layout_constraintBottom_toBottomOf="@id/price_value"
+        app:layout_constraintStart_toEndOf="@id/price_value"
+        app:layout_constraintTop_toTopOf="@id/price_value" />
+
+    <TextView
+        android:id="@+id/day_counts"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_14sdp"
+        android:background="@drawable/rec3"
+        android:fontFamily="@font/t_bold"
+        android:paddingStart="@dimen/_3sdp"
+        android:paddingEnd="@dimen/_3sdp"
+        android:text="05"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_12ssp"
+        app:layout_constraintBottom_toBottomOf="@id/price_value"
+        app:layout_constraintStart_toEndOf="@id/currency"
+        app:layout_constraintTop_toTopOf="@id/price_value" />
+
+    <TextView
+        android:id="@+id/label_days"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_4sdp"
+        android:fontFamily="@font/t_medium"
+        android:text="@string/days_label"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_11ssp"
+        app:layout_constraintBottom_toBottomOf="@id/day_counts"
+        app:layout_constraintStart_toEndOf="@id/day_counts"
+        app:layout_constraintTop_toTopOf="@id/day_counts" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_7sdp"
+        android:layout_marginBottom="@dimen/_14sdp"
+        android:fontFamily="@font/t_bold"
+        android:text="5 أشخاص  -  بنزين  -  غيار اوتوماتيك"
+        android:textColor="#191919"
+        android:textSize="@dimen/_11ssp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@id/car_model"
+        app:layout_constraintTop_toBottomOf="@id/price_value" />
+</android.support.constraint.ConstraintLayout>

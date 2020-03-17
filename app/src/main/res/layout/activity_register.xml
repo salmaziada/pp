@@ -1,0 +1,375 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/toolbar" />
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_behavior="android.support.design.widget.AppBarLayout$ScrollingViewBehavior"
+
+        >
+
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/scroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        >
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/primary_dark"
+                android:fitsSystemWindows="true"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:layoutDirection="locale"
+                android:orientation="vertical"
+                android:textDirection="locale"
+                tools:context=".ui.auoth.RegisterActivity">
+
+                <requestFocus tools:ignore="MissingConstraints" />
+
+
+                <ImageView
+                    android:id="@+id/logo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:src="@drawable/logo"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/info_login"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_16sdp"
+                    android:fontFamily="@font/t_bold"
+                    android:gravity="center"
+                    android:text="@string/registe_info"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_16ssp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/logo" />
+
+                <TextView
+                    android:id="@+id/checked_info"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_7sdp"
+                    android:gravity="center"
+                    android:text="@string/checked_data"
+                    android:textColor="#A6FFFFFF"
+                    android:textSize="@dimen/_11ssp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/info_login" />
+
+
+                <android.support.constraint.ConstraintLayout
+                    android:id="@+id/lay"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_14sdp"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:layout_marginEnd="@dimen/_14sdp"
+                    android:layout_marginBottom="@dimen/_44sdp"
+                    android:background="@drawable/rec15"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/checked_info">
+
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/firstname_editText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_18sdp"
+                        android:layout_marginTop="25dp"
+                        android:layout_marginEnd="@dimen/_18sdp"
+                        app:errorEnabled="true"
+                        app:hintAnimationEnabled="false"
+                        app:hintEnabled="false"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+
+                        >
+
+                        <android.support.design.widget.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/rec5"
+                            android:backgroundTint="#1AFFFFFF"
+                            android:drawableStart="@drawable/name_ic"
+                            android:drawablePadding="@dimen/_10sdp"
+                            android:hint="@string/Firstname_label"
+                            android:inputType="text"
+                            android:paddingStart="@dimen/_10sdp"
+                            android:paddingTop="@dimen/_10sdp"
+                            android:paddingBottom="@dimen/_10sdp"
+                            android:textAlignment="viewStart"
+                            android:textColor="@color/white"
+                            android:textColorHint="#6AFFFFFF"
+                            android:textSize="@dimen/_11ssp"
+                            app:layout_constraintHorizontal_bias="1.0" />
+                    </android.support.design.widget.TextInputLayout>
+
+                    <android.support.constraint.ConstraintLayout
+                        android:id="@+id/country"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/rec5"
+                        android:backgroundTint="#1AFFFFFF"
+                        app:layout_constraintEnd_toEndOf="@id/firstname_editText"
+                        app:layout_constraintStart_toStartOf="@id/firstname_editText"
+                        app:layout_constraintTop_toBottomOf="@id/firstname_editText">
+
+
+                        <android.support.design.widget.TextInputEditText
+                            android:id="@+id/phonenmu_editText2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@color/transparent"
+                            android:drawableStart="@drawable/call"
+                            android:drawablePadding="@dimen/_10sdp"
+                            android:hint="@string/phone_num_label"
+                            android:inputType="phone"
+                            android:paddingStart="@dimen/_10sdp"
+                            android:paddingTop="@dimen/_10sdp"
+                            android:paddingBottom="@dimen/_10sdp"
+                            android:textAlignment="viewStart"
+                            android:textColor="@color/white"
+                            android:textColorHint="#6AFFFFFF"
+                            android:textSize="@dimen/_11ssp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+<android.support.constraint.ConstraintLayout
+    android:id="@+id/lay_down"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+
+                        <TextView
+                            android:id="@+id/country_key"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="@dimen/_7sdp"
+                            android:gravity="center"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/_11ssp"
+                            android:visibility="visible"
+                            app:layout_constraintBottom_toBottomOf="@id/flage"
+
+                            app:layout_constraintEnd_toStartOf="@id/flage"
+                            app:layout_constraintTop_toTopOf="@id/flage" />
+
+                        <ImageView
+                            android:id="@+id/dropdown"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="@dimen/_6sdp"
+                            android:padding="@dimen/_4sdp"
+                            android:src="@drawable/drop"
+                            app:layout_constraintBottom_toBottomOf="@id/flage"
+                            app:layout_constraintEnd_toStartOf="@id/country_key"
+                            app:layout_constraintTop_toTopOf="@id/flage" />
+
+                        <View
+                            android:id="@+id/view"
+                            android:layout_width="2dp"
+                            android:layout_height="18dp"
+                            android:layout_marginEnd="@dimen/_6sdp"
+                            android:background="@color/white"
+                            android:visibility="visible"
+                            app:layout_constraintBottom_toBottomOf="@id/country_key"
+                            app:layout_constraintEnd_toStartOf="@id/dropdown"
+                            app:layout_constraintTop_toTopOf="@id/country_key" />
+
+                        <ImageView
+                            android:id="@+id/flage"
+                            android:layout_width="@dimen/_20sdp"
+                            android:layout_height="@dimen/_13sdp"
+                            android:layout_marginEnd="@dimen/_17sdp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+</android.support.constraint.ConstraintLayout>
+
+                    </android.support.constraint.ConstraintLayout>
+
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/email_editText"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_15sdp"
+                        app:errorEnabled="true"
+                        app:hintAnimationEnabled="false"
+                        app:hintEnabled="false"
+                        app:layout_constraintEnd_toEndOf="@id/firstname_editText"
+                        app:layout_constraintHorizontal_bias="1.0"
+                        app:layout_constraintStart_toStartOf="@id/firstname_editText"
+                        app:layout_constraintTop_toBottomOf="@id/country">
+
+                        <android.support.design.widget.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/rec5"
+                            android:backgroundTint="#1AFFFFFF"
+                            android:drawableStart="@drawable/mail"
+                            android:drawablePadding="@dimen/_10sdp"
+
+                            android:hint="@string/emaily_label"
+                            android:inputType="textEmailAddress"
+                            android:paddingStart="@dimen/_10sdp"
+                            android:paddingTop="@dimen/_10sdp"
+                            android:paddingBottom="@dimen/_10sdp"
+                            android:textAlignment="viewStart"
+                            android:textColor="@color/white"
+                            android:textColorHint="#6AFFFFFF"
+                            android:textSize="@dimen/_11ssp" />
+                    </android.support.design.widget.TextInputLayout>
+
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/password_Login_editText"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        app:errorEnabled="true"
+                        app:hintAnimationEnabled="false"
+                        app:hintEnabled="false"
+                        app:layout_constraintEnd_toEndOf="@id/firstname_editText"
+                        app:layout_constraintStart_toStartOf="@id/firstname_editText"
+                        app:layout_constraintTop_toBottomOf="@id/email_editText"
+                        app:passwordToggleEnabled="true"
+                        app:passwordToggleTint="@color/white">
+
+                        <android.support.design.widget.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/rec5"
+                            android:backgroundTint="#1AFFFFFF"
+                            android:drawableStart="@drawable/unlocked"
+                            android:drawablePadding="12dp"
+                            android:hint="@string/password"
+                            android:imeOptions="actionNext"
+                            android:inputType="textPassword"
+                            android:maxLines="1"
+                            android:paddingStart="@dimen/_12sdp"
+                            android:paddingTop="@dimen/_8sdp"
+                            android:paddingBottom="@dimen/_10sdp"
+                            android:textAlignment="viewStart"
+                            android:textColor="@color/white"
+                            android:textColorHint="#6AFFFFFF"
+                            android:textSize="@dimen/_11ssp" />
+
+                    </android.support.design.widget.TextInputLayout>
+
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/confirm_password_editText"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:textColorHint="#6AFFFFFF"
+                        app:errorEnabled="true"
+                        app:hintAnimationEnabled="false"
+                        app:hintEnabled="false"
+                        app:layout_constraintEnd_toEndOf="@id/password_Login_editText"
+                        app:layout_constraintStart_toStartOf="@id/password_Login_editText"
+                        app:layout_constraintTop_toBottomOf="@id/password_Login_editText"
+                        app:passwordToggleEnabled="true"
+                        app:passwordToggleTint="@color/white">
+
+                        <android.support.design.widget.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/rec5"
+                            android:backgroundTint="#1AFFFFFF"
+                            android:drawableStart="@drawable/unlocked"
+                            android:drawablePadding="12dp"
+                            android:hint="@string/password_confirm"
+                            android:imeOptions="actionNext"
+                            android:inputType="textPassword"
+                            android:maxLines="1"
+                            android:paddingStart="@dimen/_12sdp"
+                            android:paddingTop="@dimen/_8sdp"
+                            android:paddingBottom="@dimen/_10sdp"
+                            android:textAlignment="viewStart"
+                            android:textColor="@color/white"
+                            android:textColorHint="#6AFFFFFF"
+                            android:textSize="@dimen/_11ssp" />
+                    </android.support.design.widget.TextInputLayout>
+                    <Button
+                    android:id="@+id/login_bt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_17sdp"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:layout_marginEnd="@dimen/_17sdp"
+                    android:layout_marginBottom="@dimen/_25sdp"
+                    android:background="@drawable/rec5"
+                    android:gravity="center"
+                    android:text="@string/register_now2"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_14ssp"
+
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/confirm_password_editText" />
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/countries_list"
+                        android:layout_width="@dimen/_200sdp"
+                        android:layout_height="@dimen/_200sdp"
+                        app:layout_constraintTop_toTopOf="@id/country"
+                        android:background="@drawable/list"
+                        android:visibility="gone"
+                        android:elevation="@dimen/_10sdp"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        tools:itemCount="7"
+                        tools:listitem="@layout/country_item" />
+
+                </android.support.constraint.ConstraintLayout>
+
+                <ImageView
+                    android:id="@+id/image"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/mask_ico"
+                    app:layout_constraintBottom_toBottomOf="parent" />
+
+                <ProgressBar
+                    android:id="@+id/progress"
+                    android:layout_width="@dimen/_40sdp"
+                    android:layout_height="@dimen/_40sdp"
+                    android:layout_gravity="center"
+                    android:indeterminateTint="@color/bron"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+
+                    />
+
+
+            </android.support.constraint.ConstraintLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+    </android.support.constraint.ConstraintLayout>
+
+</android.support.design.widget.CoordinatorLayout>

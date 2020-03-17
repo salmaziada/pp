@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="30.699" height="28.145" viewBox="0 0 30.699 28.145">
+  <defs>
+    <filter id="hidden" x="0" y="0" width="30.699" height="28.145" filterUnits="userSpaceOnUse">
+      <feOffset input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="2" result="blur"/>
+      <feFlood flood-opacity="0.071"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g transform="matrix(1, 0, 0, 1, 0, 0)" filter="url(#hidden)">
+    <path id="hidden-2" data-name="hidden" d="M11.347,9.4A4.25,4.25,0,0,1,15.6,13.648a4.183,4.183,0,0,1-.3,1.551l2.486,2.486A10.092,10.092,0,0,0,20.7,13.648a10.056,10.056,0,0,0-9.351-6.373,9.938,9.938,0,0,0-3.386.595L9.8,9.7a4.27,4.27,0,0,1,1.551-.3ZM2.85,7.083,4.787,9.021l.387.387A10.065,10.065,0,0,0,2,13.648,10.038,10.038,0,0,0,15.073,19.3l.361.361,2.477,2.481,1.083-1.079L3.933,6,2.85,7.083Zm4.7,4.695,1.313,1.313a2.693,2.693,0,0,0-.064.557A2.551,2.551,0,0,0,11.347,16.2a2.619,2.619,0,0,0,.552-.064l1.313,1.313a4.18,4.18,0,0,1-1.865.45,4.221,4.221,0,0,1-3.8-6.118Zm3.658-.667,2.677,2.677.013-.14A2.551,2.551,0,0,0,11.347,11.1l-.14.013Z" transform="translate(4)" fill="#ffa673"/>
+  </g>
+</svg>

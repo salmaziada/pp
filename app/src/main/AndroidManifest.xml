@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="net.selsela.carRental">
+    <!-- To auto-complete the email text field in the login form with the user's emails -->
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.READ_PROFILE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:name=".SelselaApplication"
+        android:allowBackup="false"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true"
+        tools:ignore="GoogleAppIndexingWarning"
+        tools:replace="android:allowBackup">
+        <activity android:name=".ui.auoth.ActivationActivity"
+            android:screenOrientation="portrait"
+
+            ></activity>
+        <activity android:name=".ui.intro.IntroActivity"
+            android:screenOrientation="portrait"
+
+            />
+        <activity android:name=".ui.auoth.RegisterActivity"
+            android:screenOrientation="portrait"
+
+            />
+        <activity android:name=".ui.order.OrderDeatilsActivity"
+
+            android:screenOrientation="portrait"
+            />
+        <activity android:name=".ui.archives_orders.Archives_ordersActivity"
+            android:screenOrientation="portrait"
+
+            />
+        <activity android:name=".ui.order.SuccessOrderActivity"
+            android:screenOrientation="portrait"
+
+            />
+        <activity android:name=".ui.order.OrderActivity"
+            android:screenOrientation="portrait"
+
+            />
+        <activity android:name=".ui.order.PersonalInfoActivity"
+
+            android:screenOrientation="portrait"
+            />
+        <activity android:name=".ui.car_details.Car_detailsActivity"
+
+            android:screenOrientation="portrait"
+
+            />
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+
+        <activity
+            android:name=".ui.main.MainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".ui.main.SplachActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.notifications.NotificationsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.about_us.About_Us_Activity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.account.ProfileActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.contact_us.ContactUsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.auoth.ForgetPasswordActivity"
+            android:screenOrientation="portrait" /> <!-- fabric -->
+        <meta-data
+            android:name="google_analytics_adid_collection_enabled"
+            android:value="false" />
+        <meta-data
+            android:name="DATABASE"
+            android:value="selsela.db" />
+        <meta-data
+            android:name="VERSION"
+            android:value="1" />
+        <meta-data
+            android:name="QUERY_LOG"
+            android:value="true" />
+        <meta-data
+            android:name="DOMAIN_PACKAGE_NAME"
+            android:value="com.selsela.example.data.model" />
+
+        <activity
+            android:name=".ui.auoth.LoginActivity"
+            android:label="@string/title_activity_login2" /> <!-- Firebase Notifications -->
+        <service android:name=".util.notification.MyFirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <service android:name=".data.SyncService" />
+
+        <receiver
+            android:name=".data.SyncService$SyncOnConnectionAvailable"
+            android:enabled="false">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+        </receiver>
+
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="eb0a76fe70ac68c41f9f22e272d43c07dbc9844b" />
+        <meta-data
+            android:name="google_analytics_adid_collection_enabled"
+            android:value="false" />
+
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
+    </application>
+
+</manifest>

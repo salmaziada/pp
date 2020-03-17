@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_gravity="bottom"
+
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:padding="@dimen/_8sdp"
+        android:background="@color/gray2"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <android.support.v7.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+android:id="@+id/confirm_pay"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:text="@string/Confirm_payment"
+            android:textColor="@color/blue"
+            android:textSize="@dimen/_10ssp"
+            android:textStyle="bold" />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="@dimen/_2sdp"
+                android:layout_height="@dimen/_15sdp"
+                android:background="#33132737">
+
+            </View>
+
+        </LinearLayout>
+        <android.support.v7.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:layout_gravity="center"
+android:id="@+id/cancle"
+            android:text="@string/Cancel"
+
+            android:textColor="@color/blue"
+            android:textSize="@dimen/_12ssp" />
+
+    </LinearLayout>
+
+    <android.support.v7.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:gravity="center"
+        android:text="@string/paycash"
+        android:textSize="@dimen/_18ssp"
+        android:layout_gravity="center"
+        android:textColor="@color/blue"
+        />
+    <android.support.v7.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_7sdp"
+        android:text="@string/payment_receipt"
+        android:textSize="@dimen/_12ssp"
+        android:layout_gravity="center"
+        android:textColor="@color/blue"
+        />
+
+    <RadioGroup
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:id="@+id/radioGroup1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <RadioButton
+            android:id="@+id/Building"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+
+            android:layout_margin="@dimen/_7sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_weight="1"
+            android:background="@drawable/shape_choose_payment"
+            android:padding="@dimen/_13sdp"
+            android:text="@string/Through_guard"
+            android:textColor="@color/blue"
+            android:theme="@style/RadioButtonStyle2" />
+
+        <RadioButton
+            android:id="@+id/house"
+
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+
+            android:layout_margin="@dimen/_7sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_weight="1"
+
+            android:background="@drawable/shape_choose_payment"
+
+            android:padding="@dimen/_13sdp"
+            android:text="@string/Through_office"
+            android:textColor="@color/blue"
+            android:theme="@style/RadioButtonStyle2" />
+
+    </RadioGroup>
+    <android.support.v7.widget.AppCompatTextView
+        android:layout_margin="@dimen/_10sdp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="start"
+        android:text="@string/receipt_picture"
+        android:textSize="@dimen/_15ssp"
+        android:textColor="@color/blue"
+        />
+    <LinearLayout
+        android:layout_margin="@dimen/_10sdp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <com.github.siyamed.shapeimageview.RoundedImageView
+            android:layout_margin="@dimen/_10sdp"
+            android:id="@+id/img_bill"
+            android:visibility="gone"
+
+            android:layout_width="@dimen/_90sdp"
+            android:layout_height="@dimen/_100sdp"
+            app:siRadius="@dimen/_7sdp" />
+
+        <ImageView
+            android:layout_gravity="center"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:padding="@dimen/_25sdp"
+            android:background="@drawable/shape_select_image"
+            android:id="@+id/add_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/pluse_bron" />
+
+
+    </LinearLayout>
+</LinearLayout>
